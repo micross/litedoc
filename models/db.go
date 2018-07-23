@@ -18,5 +18,6 @@ func InitDB() {
 	if env == gin.DebugMode {
 		db.LogMode(true)
 	}
+	db.AutoMigrate(new(Blog), new(Book), new(Attachment), new(Document), new(History), new(Option), new(Tag), new(Token), new(User), new(Vote), new(RefreshToken))
 	DB = db
 }
