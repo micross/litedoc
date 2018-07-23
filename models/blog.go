@@ -39,9 +39,9 @@ type Blog struct {
 	UpdatedAt time.Time `json:"updated_at"`
 	//创建时间
 	CreatedAt  time.Time `json:"created_at"`
-	CreateName string    `orm:"-" json:"create_name"`
+	CreateName string    `gorm:"-" json:"create_name"`
 	//版本号
 	Version int64 `json:"version"`
 	//附件列表
-	Attachments []*Attachment `orm:"-" json:"attachments"`
+	Attachments []*Attachment `gorm:"-" json:"attachments"`
 }
