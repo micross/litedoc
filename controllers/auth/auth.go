@@ -10,9 +10,14 @@ func Login(c *gin.Context) {
 		"test": "ok",
 	})
 }
-func Logout(c *gin.Context) {
 
+func Logout(c *gin.Context) {
+	token := c.Param("token")
+	c.JSON(http.StatusOK, gin.H{
+		"token": token,
+	})
 }
+
 func Register(c *gin.Context) {
 
 }
