@@ -13,7 +13,7 @@ type History struct {
 	ParentId     int       `json:"parent_id"`
 	Markdown     string    `json:"markdown"`
 	Content      string    `json:"content"`
-	UserId       int       `json:"member_id"`
+	UserId       int       `json:"user_id"`
 	UpdatedAt    time.Time `json:"updated_at"`
 	Version      int64     `json:"version"`
 }
